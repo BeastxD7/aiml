@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aiml</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .navbar {
+      background-color: #007bff !important; /* Blue color */
+    }
+    .navbar-brand {
+      font-weight: bold;
+    }
+    .nav-item {
+      margin-right: 15px;
+    }
+    .nav-link {
+      color: #ffffff !important; /* White color */
+      font-weight: bold;
+    }
+    .nav-link:hover {
+      color: #dee2e6 !important; /* Light gray color on hover */
+    }
+    .container-fluid {
+      padding-top: 70px; /* Adjust based on navbar height */
+    }
+    .subject-section {
+      margin-bottom: 40px;
+      border: 1px solid #ddd; /* Gray border */
+      padding: 20px;
+      border-radius: 5px; /* Rounded corners */
+      background-color: #ffffff; /* White background */
+    }
+    .subject-section h3 {
+      margin-bottom: 20px;
+      font-weight: bold;
+      color: #333333; /* Dark text color */
+    }
+    .file-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .file-list li {
+      margin-bottom: 5px;
+    }
+    .file-list li a {
+      color: #007bff; /* Blue link color */
+    }
+    .file-list li a:hover {
+      text-decoration: underline;
+    }
+    .upload-btn {
+      margin-top: 10px;
+    }
+    .file-input {
+      display: none;
+    }
+    .custom-file-upload {
+      cursor: pointer;
+    }
+  </style>
+
+
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">AIML classroom</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#notes">Notes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#assignments">Assignments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#textbooks">Textbooks</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#oldpapers">Old Question Papers</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container-fluid">
+    <!-- Notes section -->
+    <section id="notes" class="subject-section">
+      <h3>Notes</h3>
+      <div class="subject-list">
+        <!-- Dynamic notes upload for each subject -->
+        <div id="notes-dbms" class="subject-notes"></div>
+        <div id="notes-pai" class="subject-notes"></div>
+        <div id="notes-atc" class="subject-notes"></div>
+        <div id="notes-cn" class="subject-notes"></div>
+        <div id="notes-evs" class="subject-notes"></div>
+        <div id="notes-rmipr" class="subject-notes"></div>
+      </div>
+      
+    
+    </section>
+    <div id="container" class="container-fluid">
+      <!-- Sections will be dynamically added here -->
+  </div>
+
+    <!-- Assignments section -->
+    <section id="assignments" class="subject-section">
+      <h3>Assignments</h3>
+      <div class="subject-list">
+        <!-- Dynamic assignment upload for each subject -->
+        <div id="assignments-dbms" class="subject-assignments"></div>
+        <div id="assignments-pai" class="subject-assignments"></div>
+        <div id="assignments-atc" class="subject-assignments"></div>
+        <div id="assignments-cn" class="subject-assignments"></div>
+        <div id="assignments-evs" class="subject-assignments"></div>
+        <div id="assignments-rmipr" class="subject-assignments"></div>
+      </div>
+    </section>
+
+    <!-- Textbooks section -->
+    <section id="textbooks" class="subject-section">
+      <h3>Textbooks</h3>
+      <div class="subject-list">
+        <!-- Dynamic textbook upload for each subject -->
+        <div id="textbooks-dbms" class="subject-textbooks"></div>
+        <div id="textbooks-pai" class="subject-textbooks"></div>
+        <div id="textbooks-atc" class="subject-textbooks"></div>
+        <div id="textbooks-cn" class="subject-textbooks"></div>
+        <div id="textbooks-evs" class="subject-textbooks"></div>
+        <div id="textbooks-rmipr" class="subject-textbooks"></div>
+      </div>
+    </section>
+
+    <!-- Old Question Papers section -->
+    <section id="oldpapers" class="subject-section">
+      <h3>Old Question Papers</h3>
+      <div class="subject-list">
+        <!-- Dynamic old question papers upload for each subject -->
+        <div id="oldpapers-dbms" class="subject-oldpapers"></div>
+        <div id="oldpapers-pai" class="subject-oldpapers"></div>
+        <div id="oldpapers-atc" class="subject-oldpapers"></div>
+        <div id="oldpapers-cn" class="subject-oldpapers"></div>
+        <div id="oldpapers-evs" class="subject-oldpapers"></div>
+        <div id="oldpapers-rmipr" class="subject-oldpapers"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Firebase Script -->
+  <script type="module" src="/script/fbdb.js"></script>
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+</body>
+</html>
